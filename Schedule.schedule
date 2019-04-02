@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schedule id="1">
+  <id>1096050630118613</id>
+  <name>Schedule</name>
+  <blockJob id="2">
+    <block class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="3">
+      <project id="4"/>
+      <name>Schedule1554195778558</name>
+      <namedBlock>false</namedBlock>
+      <childReference id="5">
+        <child class="concurrentBlock" id="6">
+          <project reference="4"/>
+          <name>Schedule:middleBlock</name>
+          <namedBlock>false</namedBlock>
+          <childReference id="7">
+            <child class="robotBlock" id="8">
+              <project reference="4"/>
+              <name>Simple</name>
+              <namedBlock>true</namedBlock>
+              <robot id="9">
+                <name>Simple</name>
+                <project>oo4</project>
+              </robot>
+            </child>
+            <scopeName>0</scopeName>
+            <enabled>true</enabled>
+            <order>0</order>
+          </childReference>
+        </child>
+        <scopeName>0</scopeName>
+        <enabled>true</enabled>
+        <order>0</order>
+      </childReference>
+    </block>
+    <blockInput>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;InputConfiguration&gt;
+  &lt;usesNewEncryption&gt;true&lt;/usesNewEncryption&gt;
+  &lt;__inputObjects/&gt;
+&lt;/InputConfiguration&gt;</blockInput>
+    <schedule reference="1"/>
+    <active>false</active>
+    <displayNameMap>{"0Simple":"Simple"}</displayNameMap>
+  </blockJob>
+  <totalRuns>0</totalRuns>
+  <active>true</active>
+  <useEmailNotification>false</useEmailNotification>
+  <nextRun id="10">2019-04-02 10:00:00.0 UTC</nextRun>
+  <maxRuntime>-1</maxRuntime>
+  <maxObjectsExtracted>-1</maxObjectsExtracted>
+  <modifiedBy>admin</modifiedBy>
+  <cluster id="11">
+    <name>Non Production</name>
+  </cluster>
+  <scheduler class="org.quartz.impl.StdScheduler" id="12">
+    <scheduler/></scheduler>
+  <trigger class="org.quartz.SimpleTrigger" id="13">
+    <name>1096050630118613</name>
+    <start id="14">2019-04-02 09:00:00.0 UTC</start>
+    <interval>3600000</interval>
+    <repeatCount>-1</repeatCount>
+  </trigger>
+  <revisionNumber>local</revisionNumber>
+  <lastModified id="15">2019-04-02 09:02:58.561 UTC</lastModified>
+  <scheduleBytes id="16"/>
+</schedule>
